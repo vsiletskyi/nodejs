@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 
 //Routes
-const Home = require('./routes/Home');
+const Index = require('./routes/index');
 const About = require('./routes/About');
 const Contact = require('./routes/Contact');
 
@@ -14,9 +14,9 @@ app.set('view engine', "pug");
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use(Home);
-app.use(About);
-app.use(Contact);
+app.use(index);
+// app.use(About);
+// app.use(Contact);
 
 
 app.listen(PORT);
